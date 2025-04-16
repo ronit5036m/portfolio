@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+</head>
+<body>
+    <div class="scroll-top">
+        <i class="fa-solid fa-angle-up" id="scroll-top"></i>
+    </div>
+    <header>
+        <nav>
+            <div class="nav_container">
+                <div class="close_btn_section">
+                    <button class="close_btn">
+                        <i class="fa-solid fa-close"></i>    
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="/">RS</a>
+                </div>
+                <div class="toggle_section">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <div class="links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#project">Project</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <div class="reponsive_container">
+            <div class="logo_section">
+                <div class="logo_responsive">
+                    <a href="/">RS</a>
+                </div>
+            </div>
+            <div class="toggle_dark_light_section">
+                <button class="tgl_btn">
+                    <span id="modeIcon">
+                        <i class="fa-solid fa-moon"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="menu_bar_section">
+                <button class="menu_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="hero_section" id="home">
+        <div class="mysection">
+            <span class="wellcome_section">Wellcome</span>
+            <span class="myName_section">I am ronit</span>
+            <p>I am a <span id="changing_content"></span></p>
+        </div>
+    </div>
+    <!-- <div class="hero_section" id="home">
+        <div class="mysection">
+            <span class="wellcome_section">Wellcome</span>
+            <span class="myName_section">I am ronit</span>
+            <p>I am a <span id="changing_content"></span></p>
+        </div>
+    </div> -->
+    <script src="script.js"></script>
+</body>
+</html>
