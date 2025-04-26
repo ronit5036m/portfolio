@@ -1,0 +1,249 @@
+@media screen and (max-width: 700px) {
+    nav .nav_container .logo,.toggle_section{
+        display: none;
+    }
+
+    /*                                  Responsive navbar section */
+
+    .reponsive_container{
+        display: block;
+        height: 85px;
+        width: 100%;
+        /* border: 2px solid red; */
+        background-color: var(--nav_color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 0 25px var(--boxshadow_color);
+        backdrop-filter: blur(40px);
+        z-index: 899;
+    }
+    .reponsive_container .logo_section .logo_responsive a{
+        display: block;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--font_color);
+        transition: 0.3s ease color;
+        font-family: extrabold;
+    }
+    i{
+        transition: 0.3s ease color;
+        color: var(--font_color);
+    }
+    .reponsive_container .logo_section .logo_responsive a:hover,
+    .toggle_dark_light_section .tgl_btn i:hover,
+    .menu_bar_section .menu_btn i:hover
+    {
+        color: var(--hover_color);
+    }
+    .reponsive_container .menu_bar_section , .toggle_dark_light_section , .logo_section{
+        height: 100%;
+        width: 100px;
+        /* border: 2px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*                                  Menubar and Close button section */
+
+    .menu_btn{
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        /* border: 2px solid red; */
+    }
+     .close_btn_section{
+        height: 70px;
+        width: 100%;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 25px;
+     }
+     .close_btn_section button i{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .toggle_section_responsive{
+        display: block;
+        height: 80%;
+        width: 80px;
+        /* border: 2px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .toggle_section_responsive .modeIconResponsive i{
+        cursor: pointer;
+        font-size: 1.7rem;
+     }
+     .toggle_section_responsive .modeIconResponsive i:hover{
+        color: var(--hover_color);
+     }
+     /*                                     Main Navbar section */
+    
+
+    nav{
+        position: fixed;
+        left: -100%;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        /* border-radius: 0 20px 20px 0; */
+        background-color: var(--nav_color);
+        transition: 0.3s ease left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: none;
+        backdrop-filter: blur(25px);
+    }
+    nav a{
+        font-size: 1.7rem;
+        color: var(--font_color);
+    }
+    nav .close_btn{
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 5px 0 5px 0;
+        position: relative;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 2rem;
+        border-radius: 5px;
+        outline: 2px solid var(--font_color);
+        cursor: pointer;
+        color: var(--font_color);
+    }
+    nav .nav_container{
+        flex-direction: column;
+        justify-content: center;
+        /* border: 2px solid red; */
+    }
+    nav .nav_container .links{
+        flex-direction: column;
+        /* border: 2px solid red; */
+    }
+    .hero_section{
+        height: 130vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-family: extrabold;
+        font-weight: bold;
+        /* border: 2px solid red; */
+    }
+    .hero_section .hero_section_container{
+        flex-direction: column;
+    }
+    .hero_section .mysection{
+        height: 300px;
+        width: 90%;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: center;
+        color: var(--hover_color);
+        /* flex-direction: column; */
+        font-family: extrabold;
+    }
+    .hero_section .mysection p{
+        font-family: extrabold;
+        color: var(--font_color);
+    }
+    #changing_content{
+        color: var(--hover_color);
+    }
+
+    
+    #changing_content::after {
+        color: var(--hover_color);
+    }
+    .hero_section .mysection .social_links .social_link_heading{
+        /* border: 2px solid red; */
+        padding-right: 1rem;
+    }
+    .hero_section .mysection .social_links .links_icons i{
+        color: var(--hover_color);
+    }
+
+    .image_section{
+        height: 500px;
+        width: 90%;
+        color: var(--font_color);
+    }
+    .image_section button i{
+        color: var(-dark_innercolor);
+    }
+
+    /*                                          About section */
+
+    .about_section{
+        height: 200vh;
+    }
+    .about_section .about_container{
+        height: 95%;
+        width: 95%;
+        flex-direction: column;
+    }
+    .about_section .about_container .about_me_description,
+    .about_section .about_container .about_my_skills,
+    .about_section .about_container .education_qualification{
+        height: 50%;
+        width: 90%;
+        margin: 20px 0 20px 0;
+    }
+    .about_section .about_container .about_me_description p{
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /*                                          project section */
+    .project_section{
+        height: 200vh;
+    }
+    .card_section{
+        flex-direction: column;
+    }
+    .project_section .project_container .project_card{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+
+
+    /*                                         contact section */
+    
+    .contact_section{
+        height: 150vh;
+        flex-direction: column;   
+    }
+    .contact_section .contact_description{
+        /* display: none; */
+        padding-bottom: 20px;
+    }
+    .contact_section .contact_form , .contact_description{
+        height: 80%;
+        width: 100%;
+    }
+    .contact_description_container{
+        width: 90%;
+    }
+    .contact_form form{
+        width: 90%;
+    }
+}
