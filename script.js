@@ -2,7 +2,6 @@ const menuButton = document.querySelector('.menu_btn');
 const closeButton = document.querySelector('.close_btn');
 const navBar = document.querySelector("nav");
 const reponsive_container = document.querySelector(".reponsive_container");
-// const toggleButton = document.querySelector(".tgl_btn");
 const navBartoggleButton = document.querySelector(".toggle_section");
 const toggleButtonResponsive = document.querySelector(".toggle_section_responsive");
 const modeIcon = document.querySelector(".modeIcon");
@@ -13,7 +12,21 @@ const myName_section = document.querySelector(".myName_section");
 const navbar = document.querySelector("nav");
 const tgl_btn = document.getElementById("tgl_btn");
 
+// Right Click Disable
 
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+});
+document.addEventListener('mousedown', function(event) {
+  if (event.button === 2 || event.ctrlKey || event.shiftKey || event.altKey) {
+    event.preventDefault();
+  }
+});
+document.addEventListener('keydown', function(event) {
+  if (event.ctrlKey || event.shiftKey || event.altKey) {
+    event.preventDefault();
+  }
+});
 
 function applyMode(mode) {
   if (mode === "night") {
