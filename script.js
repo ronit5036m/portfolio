@@ -67,12 +67,12 @@ closeButton.addEventListener("click",()=>{
 });
 
 function closeButtonAnimate(){
-  navBar.style.left = "-100%"
+  navBar.style.left = "-100%";
 }
 
 
 (function linkClicked(){
-  if(mediaMatch.matches){
+  if(mediaMatch.media){
     link.forEach((link)=>{
       link.addEventListener("click",()=>{
         closeButtonAnimate();       
