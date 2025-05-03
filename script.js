@@ -1,34 +1,29 @@
-const menuButton = document.querySelector('.menu_btn');
-const closeButton = document.querySelector('.close_btn');
+const menuButton = document.querySelector(".menu_btn");
+const closeButton = document.querySelector(".close_btn");
 const navBar = document.querySelector("nav");
 const reponsive_container = document.querySelector(".reponsive_container");
 const navBartoggleButton = document.querySelector(".toggle_section");
 const toggleButtonResponsive = document.querySelector(".toggle_section_responsive");
 const modeIcon = document.querySelectorAll(".modeIcon");
-// const modeIconResponsive = document.querySelector(".modeIconResponsive");
 const scrollTop = document.getElementById("scroll-top");
 const wellcome_section_txt = document.querySelector(".wellcome_section");
 const myName_section = document.querySelector(".myName_section");
 const navbar = document.querySelector("nav");
 const tgl_btn = document.getElementById("tgl_btn");
-
 const link = document.querySelectorAll(".link");
 const mediaMatch = window.matchMedia("(max-width: 700px)");
 
-
-
-
 // Right Click Disable
 
-document.addEventListener('contextmenu', function(event) {
+document.addEventListener("contextmenu", function (event) {
   event.preventDefault();
 });
-document.addEventListener('mousedown', function(event) {
+document.addEventListener("mousedown", function (event) {
   if (event.button === 2 || event.ctrlKey || event.shiftKey || event.altKey) {
     event.preventDefault();
   }
 });
-document.addEventListener('keydown', function(event) {
+document.addEventListener("keydown", function (event) {
   if (event.ctrlKey || event.shiftKey || event.altKey) {
     event.preventDefault();
   }
@@ -49,109 +44,106 @@ applyMode(savedMode);
 
 // For Navbar
 
-modeIcon.forEach((btn)=>{
+modeIcon.forEach((btn) => {
   btn.addEventListener("click", () => {
     const isNight = document.body.classList.toggle("night");
     const newMode = isNight ? "night" : "day";
     localStorage.setItem("mode", newMode);
-    btn.innerHTML = isNight ? "<i class='fa-solid fa-sun'></i>" : "<i class='fa-solid fa-moon'></i>";
+    btn.innerHTML = isNight
+      ? "<i class='fa-solid fa-sun'></i>"
+      : "<i class='fa-solid fa-moon'></i>";
   });
 });
 
-menuButton.addEventListener("click",()=>{
-    navBar.style.left = "0px"
+menuButton.addEventListener("click", () => {
+  navBar.style.left = "0px";
 });
 
-closeButton.addEventListener("click",()=>{
-    closeButtonAnimate();
+closeButton.addEventListener("click", () => {
+  closeButtonAnimate();
 });
 
-function closeButtonAnimate(){
+function closeButtonAnimate() {
   navBar.style.left = "-100%";
 }
 
-
-(function linkClicked(){
-  if(mediaMatch.media){
-    link.forEach((link)=>{
-      link.addEventListener("click",()=>{
-        closeButtonAnimate();       
-      })
-    })
+(function linkClicked() {
+  if (mediaMatch.media) {
+    link.forEach((link) => {
+      link.addEventListener("click", () => {
+        closeButtonAnimate();
+      });
+    });
   }
-})()
+})();
 
-
-window.addEventListener("scroll",()=>{
-  if(window.scrollY>100){
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
     reponsive_container.style.position = "fixed";
     // navBar.style.position = "fixed";
-  }
-  else{
+  } else {
     reponsive_container.style.position = "sticky";
     // navBar.style.position = "sticky";
   }
 });
 
-                                      // Scroll Adjustment
+// Scroll Adjustment
 
-document.addEventListener("scroll",()=>{
-  if (window.scrollY>50) {
-      scrollTop.style.display = "block";
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    scrollTop.style.display = "block";
   } else {
-      scrollTop.style.display = "none";
+    scrollTop.style.display = "none";
   }
 });
 
-scrollTop.addEventListener("click",()=>{
+scrollTop.addEventListener("click", () => {
   window.scrollTo({
-      top : 0,
-      behavior: "smooth"
+    top: 0,
+    behavior: "smooth",
   });
 });
 
-
 let txt = "Hey ✌";
-let txt2 = "It's Ronit"
-function type(txt,txtPortion,speed){
-  for(let i = 0; i<=txt.length; i++){
-    setTimeout(()=>{
-      txtPortion.textContent = txt.slice(0,i)
-    },i*speed);
+let txt2 = "It's Ronit";
+function type(txt, txtPortion, speed) {
+  for (let i = 0; i <= txt.length; i++) {
+    setTimeout(() => {
+      txtPortion.textContent = txt.slice(0, i);
+    }, i * speed);
   }
 }
 
-window.addEventListener("DOMContentLoaded",()=>{
-  type(txt,wellcome_section_txt,50)
-  type(txt2,myName_section,50)
-})
+window.addEventListener("DOMContentLoaded", () => {
+  type(txt, wellcome_section_txt, 50);
+  type(txt2, myName_section, 50);
+});
 
+const texts = ["Devloper </>.", "Designer .", "Student ."];
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-  const texts = ["Devloper </>.", "Designer .", "Student ."];
-  let textIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
+function typeWriter() {
+  const currentText = texts[textIndex];
+  const display = document.getElementById("changing_content");
 
-  function typeWriter() {
-    const currentText = texts[textIndex];
-    const display = document.getElementById("changing_content");
-
-    if (!isDeleting) {
-      display.textContent = currentText.substring(0, charIndex++);
-      if (charIndex > currentText.length) {
-        isDeleting = true;
-        setTimeout(typeWriter, 1000); // Pause before deleting
-        return;
-      }
-    } else {
-      display.textContent = currentText.substring(0, charIndex--);
-      if (charIndex < 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % texts.length; // Move to next text
-      }
+  if (!isDeleting) {
+    display.textContent = currentText.substring(0, charIndex++);
+    if (charIndex > currentText.length) {
+      isDeleting = true;
+      setTimeout(typeWriter, 1000); // Pause before deleting
+      return;
     }
-
-    setTimeout(typeWriter, 100); // Speed
+  } else {
+    display.textContent = currentText.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length; // Move to next text
+    }
   }
 
-  typeWriter();
+  setTimeout(typeWriter, 100); // Speed
+}
+
+typeWriter();

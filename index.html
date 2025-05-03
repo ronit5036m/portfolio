@@ -1,204 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive/media.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive/media.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Home</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="scroll-top">
-        <i class="fa-solid fa-angle-up" id="scroll-top"></i>
+      <i class="fa-solid fa-angle-up" id="scroll-top"></i>
     </div>
     <header>
-        <nav>
-            <div class="nav_container">
-                <div class="close_btn_section">
-                    <button class="close_btn">
-                        <i class="fa-solid fa-close"></i>    
-                    </button>
-                </div>
-                <div class="logo">
-                    <a href="/">RS</a>
-                </div>
-                <div class="toggle_section">
-                    <span class="modeIcon" id="tgl_btn">
-                        <i class="fa-solid fa-moon"></i>
-                    </span>
-                </div>
-                <div class="links">
-                    <a href="#home" class="link">Home</a>
-                    <a href="#about" class="link">About</a>
-                    <a href="#project" class="link">Project</a>
-                    <a href="#contact" class="link">Contact</a>
-                </div>
-            </div>
-        </nav>
-        <div class="reponsive_container">
-            <div class="logo_section">
-                <div class="logo_responsive">
-                    <a href="/">RS</a>
-                </div>
-            </div>
-            <div class="toggle_dark_light_section">
-                <div class="toggle_section_responsive">
-                    <span class="modeIcon" id="tgl_btn">
-                        <i class="fa-solid fa-moon"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="menu_bar_section">
-                <button class="menu_btn">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+      <nav>
+        <div class="nav_container">
+          <div class="close_btn_section">
+            <button class="close_btn">
+              <i class="fa-solid fa-close"></i>
+            </button>
+          </div>
+          <div class="logo">
+            <a href="/">RS</a>
+          </div>
+          <div class="toggle_section">
+            <span class="modeIcon" id="tgl_btn">
+              <i class="fa-solid fa-moon"></i>
+            </span>
+          </div>
+          <div class="links">
+            <a href="#home" class="link">Home</a>
+            <a href="#about" class="link">About</a>
+            <a href="#project" class="link">Project</a>
+            <a href="#contact" class="link">Contact</a>
+          </div>
         </div>
+      </nav>
+      <div class="reponsive_container">
+        <div class="logo_section">
+          <div class="logo_responsive">
+            <a href="/">RS</a>
+          </div>
+        </div>
+        <div class="toggle_dark_light_section">
+          <div class="toggle_section_responsive">
+            <span class="modeIcon" id="tgl_btn">
+              <i class="fa-solid fa-moon"></i>
+            </span>
+          </div>
+        </div>
+        <div class="menu_bar_section">
+          <button class="menu_btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
     </header>
     <div class="hero_section" id="home">
-        <div class="hero_section_container">
-            <div class="mysection">
-                <div class="changing_section">
-                    <span class="wellcome_section">Wellcome</span>
-                    <span class="myName_section">I am ronit</span>
-                    <p>I am a <span id="changing_content"></span></p>
-                </div>
-                <div class="social_links">
-                    <div class="social_link_heading">
-                        <h5>Contact</h5>
-                    </div>
-                    <div class="links_icons">
-                        <a href="https://www.linkedin.com/in/ronit-shakhari-998742346/" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/ronit5036m" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/_mr_ronit_s_/" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
+      <div class="hero_section_container">
+        <div class="mysection">
+          <div class="changing_section">
+            <span class="wellcome_section">Wellcome</span>
+            <span class="myName_section">I am ronit</span>
+            <p>I am a <span id="changing_content"></span></p>
+          </div>
+          <div class="social_links">
+            <div class="social_link_heading">
+              <h5>Contact</h5>
             </div>
-            <div class="image_section">
-                <div class="img_container"></div>
-                <button>
-                    <i class="fa-solid fa-download"></i>
-                    <a href="resume/ronit_resume.pdf" download id="resume_download">Download Resume</a>
-                </button>
+            <div class="links_icons">
+              <a
+                href="https://www.linkedin.com/in/ronit-shakhari-998742346/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/ronit5036m" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/_mr_ronit_s_/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
             </div>
+          </div>
         </div>
+        <div class="image_section">
+          <div class="img_container"></div>
+          <button>
+            <i class="fa-solid fa-download"></i>
+            <a href="resume/ronit_resume.pdf" download id="resume_download"
+              >Download Resume</a
+            >
+          </button>
+        </div>
+      </div>
     </div>
     <div class="about_section" id="about">
-        <div class="about_container">
-            <div class="about_me_description">
-                <i class="fa-solid fa-circle-user"></i>
-                <h1>About me</h1>
-                <p>
-                    Hi! I'm Ronit Shakhari, a passionate BCA student at ECMT.I'm currently exploring the world of web development and love building interactive, user-friendly websites.I'm skilled in HTML, CSS, JavaScript, and recently started learning React and PHP, Python. My goal is to become a full-stack developer and create impactful digital experiences.
-                </p>
-            </div>
-            <div class="about_my_skills">
-                <i class="fa fa-cogs" aria-hidden="true"></i>
-                <h1>My Skills</h1>  
-                <div class="skills">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>PHP</span>
-                    <span>PYTHON</span>
-                    <span>C</span>
-                </div>
-            </div>
-            <div class="education_qualification">
-                <i class="fa-solid fa-school"></i>
-                <h1>Education</h1>
-                <div class="details">
-                    <span>Secondary
-                        <p>2015 - 2021</p>
-                    </span>
-                    <span>Higher Secondary
-                        <p>2021 - 2023</p>
-                    </span>
-                    <span>College (B.C.A)
-                        <p>2024 - Completing</p>
-                    </span>
-                </div>
-            </div>
+      <div class="about_container">
+        <div class="about_me_description">
+          <i class="fa-solid fa-circle-user"></i>
+          <h1>About me</h1>
+          <p>
+            Hi! I'm Ronit Shakhari, a passionate BCA student at ECMT.I'm
+            currently exploring the world of web development and love building
+            interactive, user-friendly websites.I'm skilled in HTML, CSS,
+            JavaScript, and recently started learning React and PHP, Python. My
+            goal is to become a full-stack developer and create impactful
+            digital experiences.
+          </p>
         </div>
+        <div class="about_my_skills">
+          <i class="fa fa-cogs" aria-hidden="true"></i>
+          <h1>My Skills</h1>
+          <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>PYTHON</span>
+            <span>C</span>
+          </div>
+        </div>
+        <div class="education_qualification">
+          <i class="fa-solid fa-school"></i>
+          <h1>Education</h1>
+          <div class="details">
+            <span
+              >Secondary
+              <p>2015 - 2021</p>
+            </span>
+            <span
+              >Higher Secondary
+              <p>2021 - 2023</p>
+            </span>
+            <span
+              >College (B.C.A)
+              <p>2024 - Completing</p>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="project_section" id="project">
-        <div class="project_container">
-            <div class="project_header">
-                <h1>Projects</h1>
-            </div>
-            <div class="card_section">
-                <div class="project_card" id="calculator">
-                    <div class="card_image"></div>
-                    <div class="card_description">
-                        <h1>Calculator</h1>
-                        <p>Here is a simple web calculator with this calculator we can perfrom simple arithmetic operation</p>
-                    </div>
-                </div>
-                <div class="project_card" id="clock">
-                    <div class="card_image"></div>
-                    <div class="card_description">
-                        <h1>Analog clock</h1>
-                        <p>Here is a dynamic analog web clock for better time management</p>
-                    </div>
-                </div>
-                <div class="project_card" id="todo_app">
-                    <div class="card_image"></div>
-                    <div class="card_description">
-                        <h1>To-Do app</h1>
-                        <p>Here is a To-Do application where we can note our daily task</p>
-                    </div>
-                </div>
-            </div>
+      <div class="project_container">
+        <div class="project_header">
+          <h1>Projects</h1>
         </div>
+        <div class="card_section">
+          <div class="project_card" id="calculator">
+            <div class="card_image"></div>
+            <div class="card_description">
+              <h1>Calculator</h1>
+              <p>
+                Here is a simple web calculator with this calculator we can
+                perfrom simple arithmetic operation
+              </p>
+            </div>
+          </div>
+          <div class="project_card" id="clock">
+            <div class="card_image"></div>
+            <div class="card_description">
+              <h1>Analog clock</h1>
+              <p>
+                Here is a dynamic analog web clock for better time management
+              </p>
+            </div>
+          </div>
+          <div class="project_card" id="todo_app">
+            <div class="card_image"></div>
+            <div class="card_description">
+              <h1>To-Do app</h1>
+              <p>
+                Here is a To-Do application where we can note our daily task
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="contact_section" id="contact">
-        <div class="contact_description">
-            <div class="contact_description_container">
-                <h1>Contact Me</h1>
-                <p>Feel free to use the form or drop an email Old-fashioned phone calls work too</p>
-                <div class="contact_phone">
-                    <i class="fa-solid fa-phone"></i>
-                    <a href="tel:+91700136752">+91 7001367532</a>
-                </div>
-                <div class="contact_email">
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:ecmt-24-170@ecmt.in">ecmt-24-170@ecmt.in</a>
-                </div>
-                <div class="contact_location">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <a href="https://maps.app.goo.gl/eu6b4CcLyAyZyJ4fA" target="_blank">Ashoknagar,north 24 pgs,westbengal,743222,india</a>
-                </div>
+      <div class="contact_description">
+        <div class="contact_description_container">
+          <h1>Contact Me</h1>
+          <p>
+            Feel free to use the form or drop an email Old-fashioned phone calls
+            work too
+          </p>
+          <div class="contact_phone">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+91700136752">+91 7001367532</a>
+          </div>
+          <div class="contact_email">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:ecmt-24-170@ecmt.in">ecmt-24-170@ecmt.in</a>
+          </div>
+          <div class="contact_location">
+            <i class="fa-solid fa-location-dot"></i>
+            <a href="https://maps.app.goo.gl/eu6b4CcLyAyZyJ4fA" target="_blank"
+              >Ashoknagar,north 24 pgs,westbengal,743222,india</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="contact_form">
+        <form>
+          <div class="contact_form_container">
+            <label for="name">Name</label>
+            <div class="contact_name_section">
+              <input type="text" placeholder="First" id="name" required />
+              <input type="text" placeholder="Last" id="name" required />
             </div>
-        </div>
-        <div class="contact_form">
-            <form>
-                <div class="contact_form_container">
-                    <label for="name">Name</label>
-                    <div class="contact_name_section">
-                        <input type="text" placeholder="First" id="name" required>
-                        <input type="text" placeholder="Last" id="name" required>
-                    </div>
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="example@email.com" required>
-                    <label for="phone">Phone(optional)</label>
-                    <input type="number" placeholder="xxx-xxx-xxxx">
-                    <label for="message">Message</label>
-                    <textarea id="message" placeholder="Type your message..." required></textarea>
-                    <button type="submit" class="submit">Submit</button>
-                </div>
-            </form>
-        </div>
+            <label for="email">Email</label>
+            <input type="email" placeholder="example@email.com" required />
+            <label for="phone">Phone(optional)</label>
+            <input type="number" placeholder="xxx-xxx-xxxx" />
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              placeholder="Type your message..."
+              required
+            ></textarea>
+            <button type="submit" class="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
