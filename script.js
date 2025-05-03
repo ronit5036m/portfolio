@@ -4,13 +4,19 @@ const navBar = document.querySelector("nav");
 const reponsive_container = document.querySelector(".reponsive_container");
 const navBartoggleButton = document.querySelector(".toggle_section");
 const toggleButtonResponsive = document.querySelector(".toggle_section_responsive");
-const modeIcon = document.querySelector(".modeIcon");
-const modeIconResponsive = document.querySelector(".modeIconResponsive");
+const modeIcon = document.querySelectorAll(".modeIcon");
+// const modeIconResponsive = document.querySelector(".modeIconResponsive");
 const scrollTop = document.getElementById("scroll-top");
 const wellcome_section_txt = document.querySelector(".wellcome_section");
 const myName_section = document.querySelector(".myName_section");
 const navbar = document.querySelector("nav");
 const tgl_btn = document.getElementById("tgl_btn");
+
+const link = document.querySelectorAll(".link");
+const mediaMatch = window.matchMedia("(max-width: 700px)");
+
+
+
 
 // Right Click Disable
 
@@ -32,11 +38,9 @@ function applyMode(mode) {
   if (mode === "night") {
     document.body.classList.add("night");
     modeIcon.innerHTML = "<i class='fa-solid fa-sun'></i>";
-    modeIconResponsive.innerHTML = "<i class='fa-solid fa-sun'></i>";
   } else {
     document.body.classList.remove("night");
     modeIcon.innerHTML = "<i class='fa-solid fa-moon'></i>";
-    modeIconResponsive.innerHTML = "<i class='fa-solid fa-moon'></i>";
   }
 }
 
@@ -45,32 +49,38 @@ applyMode(savedMode);
 
 // For Navbar
 
-modeIcon.addEventListener("click", () => {
-  const isNight = document.body.classList.toggle("night");
-  const newMode = isNight ? "night" : "day";
-  localStorage.setItem("mode", newMode);
-  modeIcon.innerHTML = isNight ? "<i class='fa-solid fa-sun'></i>" : "<i class='fa-solid fa-moon'></i>";
+modeIcon.forEach((btn)=>{
+  btn.addEventListener("click", () => {
+    const isNight = document.body.classList.toggle("night");
+    const newMode = isNight ? "night" : "day";
+    localStorage.setItem("mode", newMode);
+    btn.innerHTML = isNight ? "<i class='fa-solid fa-sun'></i>" : "<i class='fa-solid fa-moon'></i>";
+  });
 });
-
-// For Responsive Container
-
-modeIconResponsive.addEventListener("click", () => {
-  const isNight = document.body.classList.toggle("night");
-  const newMode = isNight ? "night" : "day";
-  localStorage.setItem("mode", newMode);
-  modeIconResponsive.innerHTML = isNight ? "<i class='fa-solid fa-sun'></i>" : "<i class='fa-solid fa-moon'></i>";
-});
-
-
-
 
 menuButton.addEventListener("click",()=>{
     navBar.style.left = "0px"
 });
 
 closeButton.addEventListener("click",()=>{
-    navBar.style.left = "-100%"
+    closeButtonAnimate();
 });
+
+function closeButtonAnimate(){
+  navBar.style.left = "-100%"
+}
+
+
+(function linkClicked(){
+  if(mediaMatch.matches){
+    link.forEach((link)=>{
+      link.addEventListener("click",()=>{
+        closeButtonAnimate();       
+      })
+    })
+  }
+})()
+
 
 window.addEventListener("scroll",()=>{
   if(window.scrollY>100){
@@ -83,16 +93,7 @@ window.addEventListener("scroll",()=>{
   }
 });
 
-
-
-
-
-
-
-
                                       // Scroll Adjustment
-
-
 
 document.addEventListener("scroll",()=>{
   if (window.scrollY>50) {

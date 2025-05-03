@@ -84,11 +84,18 @@
         align-items: center;
         justify-content: center;
      }
-     .toggle_section_responsive .modeIconResponsive i{
+     /* .toggle_section_responsive .modeIconResponsive i{
         cursor: pointer;
         font-size: 1.7rem;
      }
      .toggle_section_responsive .modeIconResponsive i:hover{
+        color: var(--hover_color);
+     } */
+     .toggle_section_responsive .modeIcon i{
+        cursor: pointer;
+        font-size: 1.7rem;
+     }
+     .toggle_section_responsive .modeIcon i:hover{
         color: var(--hover_color);
      }
      /*                                     Main Navbar section */
