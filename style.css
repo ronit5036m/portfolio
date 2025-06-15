@@ -326,108 +326,147 @@ nav i {
 
 /*                                          About section */
 
-.about_section {
-  height: 90vh;
+.about_section,.teach_stack,.education_section {
+  height: 130vh;
   width: 100%;
   /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.about_section .about_container {
+.about_section .about_container,.teach_stack .teach_stack_container,.education_section .education_container{
   height: 90%;
   width: 90%;
   /* border: 2px solid red; */
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.about_section .about_container .about_me_description,
-.about_section .about_container .about_my_skills,
-.about_section .about_container .education_qualification {
-  height: 80%;
-  width: 25%;
-  /* border: 2px solid red; */
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  text-align: center;
-  font-weight: bolder;
   background-color: var(--dark_innercolor);
+  display: flex;
+  align-items: left;
+  flex-direction: column;
   border-radius: 20px;
-  color: var(--font_color);
   overflow: hidden;
 }
-.about_section .about_container .about_me_description h1,
-.about_section .about_container .about_my_skills h1,
-.about_section .about_container .education_qualification h1 {
-  font-family: extrabold;
-  color: var(--hover_color);
-}
-
-.about_section .about_container .about_me_description p {
-  height: 60%;
-  width: 90%;
-  /* border: 2px solid red; */
-  padding: 0 10px 0 10px;
-  text-align: center;
-  line-height: 1.2;
-}
-.about_section .about_container .about_my_skills .skills {
-  height: 60%;
-  width: 80%;
-  /* border: 2px solid red; */
+.about_section .about_container .about_heading,.teach_stack_heading,.education_heading{
+  padding: 1.2rem;
+  width: 100%;
+  /* border: 2px solid blue; */
   display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+  position: relative;
+  color: var(--font_color);
 }
-
-.about_section .about_container .about_my_skills span {
-  text-align: start;
-  padding-bottom: 5px;
+.about_heading::before,.teach_stack_heading::before,.education_heading::before{
+  content: "";
+  width: 120px;
   border-bottom: 5px solid var(--hover_color);
-}
-.about_section .about_container .about_my_skills span:nth-child(1) {
-  width: 95%;
-}
-.about_section .about_container .about_my_skills span:nth-child(2) {
-  width: 90%;
-}
-.about_section .about_container .about_my_skills span:nth-child(3) {
-  width: 70%;
-}
-.about_section .about_container .about_my_skills span:nth-child(4) {
-  width: 50%;
-}
-.about_section .about_container .about_my_skills span:nth-child(5) {
-  width: 50%;
-}
-.about_section .about_container .about_my_skills span:nth-child(6) {
-  width: 70%;
+  position: absolute;
+  border-radius: 5px;
+  bottom: 0;
 }
 
-.about_section .about_container i {
-  font-size: 3rem;
-  color: var(--hover_color);
+.about_section .about_container .about_description,.teach_stack .teach_stack_container .teachstack_description{
+  width: 100%;
+  padding: 1.2rem;
+  text-align: left;
+  font-weight: bold;
+  color: var(--font_color);
 }
-
-.about_section .about_container .education_qualification .details {
-  height: 60%;
-  width: 80%;
-  /* border: 2px solid red; */
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  flex-direction: column;
+.about_section .about_container .about_description p,.about_my_details .details_text,.about_my_details .my_dedication{
+  text-wrap: wrap;
+  color: var(--font_color);
+  font-size: 1.2rem;
 }
-.about_section .about_container .education_qualification .details span {
-  height: 30px;
+.about_section .about_container .about_my_details h2{
+  height: 40px;
   width: 100%;
   /* border: 2px solid red; */
-  text-align: start;
+  padding-inline-start: 1rem;
+  font-size: 2rem;
+  color: var(--font_color);
+}
+.about_my_details .details_text{
+  padding: 1.2rem;
+  font-weight: bold;
+  color: var(--font_color);
+}
+.about_my_details .personal_info{
+  height: 250px;
+  width: 100%;
+  padding-left: 3rem;
+  color: var(--font_color);
+  /* border: 2px solid red; */
+}
+.about_my_details .personal_info ul{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-size: 1.4rem;
+}
+.about_my_details .personal_info strong{
+  color: var(--hover_color);
+}
+.my_dedication{
+  /* border: 2px solid red; */
+  text-align: left;
+  font-weight: bold;
+  padding: 1.2rem;  
+  text-wrap: wrap;
+}
+.teach_stack{
+  height: 80vh !important;
+}
+.teach_stack .logos_of_language img{
+  height: 70px;
+  width: 70px;
+}
+.teach_stack .teach_stack_container .logos_of_language{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* border: 2px solid red; */
+}
+.teach_stack .teach_stack_container .logos_of_language .logo_box{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--boxshadow_color);
+  transition: 0.5s 0.2s;
+}
+.logo_box:hover{
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.education_section .education_container .qualification_container{
+  height: 40%;
+  width: 100%;
+  /* border: 2px solid red; */
+}
+.education_section .education_container .qualification_container .qualification_details{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-wrap: wrap;
+  padding: 1.2rem;
+  color: var(--font_color);
+  font-size: 1rem;
+  font-weight: bold;
+}
+.qualification_details h1{
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--hover_color);
 }
 
 /*                                          Project section */
