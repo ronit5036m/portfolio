@@ -344,6 +344,7 @@ nav i {
   flex-direction: column;
   border-radius: 20px;
   overflow: hidden;
+  justify-content: space-evenly;
 }
 .about_section .about_container .about_heading,.teach_stack_heading,.education_heading{
   padding: 1.2rem;
