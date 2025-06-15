@@ -204,7 +204,7 @@
 
   /*                                          About section */
 
-  .about_section,.education_section {
+  .about_section {
     height: 180vh;
     position: relative;
   }
@@ -212,9 +212,13 @@
     height: 95%;
     width: 95%;
     flex-direction: column;
+    justify-content: space-evenly;
   }
   .teach_stack{
     height: 100vh !important;
+  }
+  .education_section{
+    height: 150vh;
   }
   /* .about_section .about_container::before{
     content: "";
@@ -301,3 +305,8 @@
     width: 90%;
   }
 }
+/* @media screen and (max-width: 400px){
+  .about_section{
+    height: 100vh;
+  }
+} */
