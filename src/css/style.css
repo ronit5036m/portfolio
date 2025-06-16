@@ -1,10 +1,10 @@
 @font-face {
   font-family: semibold;
-  src: url("font/open-sans.bold.ttf");
+  src: url("/public/font/open-sans.bold.ttf");
 }
 @font-face {
   font-family: extrabold;
-  src: url("font/open-sans.extrabold.ttf");
+  src: url("/public/font/open-sans.extrabold.ttf");
 }
 html {
   scroll-behavior: smooth;
@@ -60,11 +60,11 @@ body {
   background-attachment: fixed;
   user-select: none;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--hover_color); 
+  background: var(--hover_color);
   border-radius: 10px;
 }
 /*                                          Navbar section */
@@ -113,7 +113,6 @@ nav {
 nav .nav_container {
   height: 95%;
   width: 95%;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -122,7 +121,6 @@ nav .nav_container .logo,
 .toggle_section {
   height: 80%;
   width: 100px;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,7 +130,6 @@ nav .toggle_section {
   border: none;
   background: transparent;
   cursor: pointer;
-  /* border: 2px solid red; */
 }
 nav .nav_container .logo a {
   font-size: 2rem;
@@ -140,7 +137,6 @@ nav .nav_container .logo a {
 nav .nav_container .links {
   height: 80%;
   width: 50%;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -175,7 +171,6 @@ nav i {
 .hero_section {
   height: 80vh;
   width: 100%;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +185,6 @@ nav i {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 2px solid red; */
   background-color: var(--dark_innercolor);
   border-radius: 20px;
 }
@@ -198,14 +192,12 @@ nav i {
 .image_section {
   height: 90%;
   width: 40%;
-  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
 }
 .hero_section .mysection .changing_section {
   height: 85%;
   width: 100%;
-  /* border: 2px solid blue; */
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -214,7 +206,6 @@ nav i {
 .hero_section .mysection .social_links {
   height: 10%;
   width: 100%;
-  /* border: 2px solid green; */
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -231,7 +222,6 @@ nav i {
 .hero_section .mysection .social_links .links_icons {
   height: 100%;
   width: 60%;
-  /* border: 2px solid green; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -277,7 +267,7 @@ nav i {
 .img_container {
   height: 320px;
   width: 320px;
-  background-image: url("./images/my_pic.png");
+  background-image: url(/src/assets/my_pic.png);
   background-size: cover;
   background-position-y: -1rem;
   background-repeat: no-repeat;
@@ -287,7 +277,6 @@ nav i {
   align-items: center;
   justify-content: center;
   filter: drop-shadow(0 0 0.05rem var(--hover_color));
-  /* border: 2px solid red; */
   overflow: hidden;
 }
 .image_section button i {
@@ -310,20 +299,20 @@ nav i {
 
 /*                                          About section */
 
-.about_section,.teach_stack,.education_section {
+.about_section,
+.teach_stack,
+.education_section {
   height: 140vh;
   width: 100%;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .about_section .about_container,
 .teach_stack .teach_stack_container,
-.education_section .education_container{
+.education_section .education_container {
   height: 90%;
   width: 90%;
-  /* border: 2px solid red; */
   background-color: var(--dark_innercolor);
   display: flex;
   align-items: left;
@@ -335,17 +324,19 @@ nav i {
 .about_section .about_container .about_heading,
 .teach_stack_heading,
 .education_heading,
-.project_heading{
+.project_heading {
   padding: 1.2rem;
   width: 100%;
-  /* border: 2px solid blue; */
   display: flex;
   align-items: center;
   font-size: 1.6rem;
   position: relative;
   color: var(--font_color);
 }
-.about_heading::before,.teach_stack_heading::before,.education_heading::before,.project_heading::before{
+.about_heading::before,
+.teach_stack_heading::before,
+.education_heading::before,
+.project_heading::before {
   content: "";
   width: 120px;
   border-bottom: 5px solid var(--hover_color);
@@ -353,39 +344,40 @@ nav i {
   border-radius: 5px;
   bottom: 0;
 }
-.about_section .about_container .about_description,.teach_stack .teach_stack_container .teachstack_description{
+.about_section .about_container .about_description,
+.teach_stack .teach_stack_container .teachstack_description {
   width: 100%;
   padding: 1.2rem;
   text-align: left;
   font-weight: bold;
   color: var(--font_color);
 }
-.about_section .about_container .about_description p,.about_my_details .details_text,.about_my_details .my_dedication{
+.about_section .about_container .about_description p,
+.about_my_details .details_text,
+.about_my_details .my_dedication {
   text-wrap: wrap;
   color: var(--font_color);
   font-size: 1.2rem;
 }
-.about_section .about_container .about_my_details h2{
+.about_section .about_container .about_my_details h2 {
   height: 40px;
   width: 100%;
-  /* border: 2px solid red; */
   padding-inline-start: 1rem;
   font-size: 2rem;
   color: var(--font_color);
 }
-.about_my_details .details_text{
+.about_my_details .details_text {
   padding: 1.2rem;
   font-weight: bold;
   color: var(--font_color);
 }
-.about_my_details .personal_info{
+.about_my_details .personal_info {
   height: 250px;
   width: 100%;
   padding-left: 3rem;
   color: var(--font_color);
-  /* border: 2px solid red; */
 }
-.about_my_details .personal_info ul{
+.about_my_details .personal_info ul {
   height: 100%;
   width: 100%;
   display: flex;
@@ -394,36 +386,34 @@ nav i {
   flex-direction: column;
   font-size: 1.4rem;
 }
-.about_my_details .personal_info strong{
+.about_my_details .personal_info strong {
   color: var(--hover_color);
 }
-.my_dedication{
-  /* border: 2px solid red; */
+.my_dedication {
   text-align: left;
   font-weight: bold;
-  padding: 1.2rem;  
+  padding: 1.2rem;
   text-wrap: wrap;
 }
 
 /*                                    My skills */
 
-.teach_stack{
+.teach_stack {
   height: 80vh !important;
 }
-.teach_stack .logos_of_language img{
+.teach_stack .logos_of_language img {
   height: 70px;
   width: 70px;
 }
-.teach_stack .teach_stack_container .logos_of_language{
+.teach_stack .teach_stack_container .logos_of_language {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  /* border: 2px solid red; */
 }
-.teach_stack .teach_stack_container .logos_of_language .logo_box{
+.teach_stack .teach_stack_container .logos_of_language .logo_box {
   height: 100px;
   width: 100px;
   display: flex;
@@ -432,19 +422,21 @@ nav i {
   border: 2px solid var(--boxshadow_color);
   transition: 0.5s 0.2s;
 }
-.logo_box:hover{
+.logo_box:hover {
   scale: 1.1;
   cursor: pointer;
 }
 
 /*                                  Education qualification */
 
-.education_section .education_container .qualification_container{
+.education_section .education_container .qualification_container {
   height: 40%;
   width: 100%;
-  /* border: 2px solid red; */
 }
-.education_section .education_container .qualification_container .qualification_details{
+.education_section
+  .education_container
+  .qualification_container
+  .qualification_details {
   height: 100%;
   width: 100%;
   display: flex;
@@ -457,7 +449,7 @@ nav i {
   font-size: 1rem;
   font-weight: bold;
 }
-.qualification_details h1{
+.qualification_details h1 {
   text-transform: uppercase;
   font-size: 1.2rem;
   color: var(--hover_color);
@@ -470,15 +462,12 @@ nav i {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 2px solid red; */
 }
-.project_section .project_container{
+.project_section .project_container {
   height: 95%;
   width: 95%;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: var(--dark_innercolor);
@@ -487,17 +476,17 @@ nav i {
   overflow-y: scroll;
   gap: 2rem;
 }
-.project_container::-webkit-scrollbar{
+.project_container::-webkit-scrollbar {
   width: 5px;
 }
 .project_container::-webkit-scrollbar-thumb {
-  background: var(--hover_color); 
+  background: var(--hover_color);
   border-radius: 10px;
 }
-.project_container::-webkit-scrollbar-thumb:hover{
+.project_container::-webkit-scrollbar-thumb:hover {
   background-color: var(--hover_color);
 }
-.project_section .project_container .project_card{
+.project_section .project_container .project_card {
   height: 600px;
   width: 390px;
   border-radius: 20px;
@@ -505,23 +494,22 @@ nav i {
   background-color: var(--nav_color);
   transition: 0.5s;
 }
-.project_section .project_container .project_card:hover{
+.project_section .project_container .project_card:hover {
   box-shadow: 0 5px 25px rgba(59, 58, 58, 0.144);
 }
-.project_card .card_picture{
+.project_card .card_picture {
   height: 30%;
   width: 100%;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--hover_color);
 }
-.project_card .card_picture img{
+.project_card .card_picture img {
   height: 70%;
   width: 30%;
 }
-.project_card .card_description{
+.project_card .card_description {
   height: 70%;
   width: 100%;
   display: flex;
@@ -529,34 +517,31 @@ nav i {
   justify-content: space-evenly;
   flex-direction: column;
 }
-.card_description .card_title{
+.card_description .card_title {
   padding: 1rem;
   width: 100%;
-  /* border: 2px solid red; */
   font-size: 1.6rem;
   color: var(--font_color);
   display: flex;
   align-items: center;
 }
-.project_card .card_description .description{
+.project_card .card_description .description {
   padding: 1rem;
   text-wrap: wrap;
   width: 100%;
   color: #8f8989;
-  /* border: 2px solid red; */
 }
-.card_description .description p{
+.card_description .description p {
   line-height: 1.5rem;
 }
-.card_description .tags{
+.card_description .tags {
   height: 30px;
   width: 100%;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.card_description .tags p{
+.card_description .tags p {
   padding: 0.5rem;
   background-color: rgba(90, 228, 143, 0.075);
   border-radius: 50px;
@@ -564,22 +549,21 @@ nav i {
   font-weight: 300;
   color: var(--hover_color);
 }
-.card_description .button_container{
+.card_description .button_container {
   height: 70px;
   width: 100%;
-  /* border: 2px solid blue; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.button_container button{
+.button_container button {
   height: 50px;
   width: 100px;
   border: none;
   border-radius: 40px;
   background-color: var(--hover_color);
 }
-.button_container button a{
+.button_container button a {
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
@@ -587,12 +571,10 @@ nav i {
   color: var(--nav_color);
 }
 
-
 /*                                          contact section */
 
 .contact_section {
   height: 100vh;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -604,12 +586,10 @@ nav i {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 2px solid red;   */
 }
 .contact_description_container {
   height: 100%;
   width: 80%;
-  /* border: 2px solid red; */
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
@@ -638,7 +618,6 @@ nav i {
 .contact_form form {
   height: 100%;
   width: 80%;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -651,7 +630,6 @@ nav i {
 .contact_form .contact_form_container {
   height: 100%;
   width: 95%;
-  /* border: 2px solid red; */
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
@@ -692,7 +670,6 @@ input::-webkit-inner-spin-button {
   padding-top: 20px;
 }
 .contact_form .contact_form_container .contact_name_section {
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -701,7 +678,6 @@ input::-webkit-inner-spin-button {
   height: 100%;
   width: 48%;
 }
-
 .contact_form .submit {
   height: 40px;
   width: 100px;
@@ -716,7 +692,7 @@ input::-webkit-inner-spin-button {
 
 /*                            Footer Section */
 
-footer{
+footer {
   height: 100px;
   width: 100%;
   margin-top: 2rem;
@@ -726,5 +702,5 @@ footer{
   justify-content: center;
   font-size: 1rem;
   font-weight: bold;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff80;
 }

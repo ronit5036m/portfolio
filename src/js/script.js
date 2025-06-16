@@ -3,7 +3,9 @@ const closeButton = document.querySelector(".close_btn");
 const navBar = document.querySelector("nav");
 const reponsive_container = document.querySelector(".reponsive_container");
 const navBartoggleButton = document.querySelector(".toggle_section");
-const toggleButtonResponsive = document.querySelector(".toggle_section_responsive");
+const toggleButtonResponsive = document.querySelector(
+  ".toggle_section_responsive"
+);
 const modeIcon = document.querySelectorAll(".modeIcon");
 const scrollTop = document.getElementById("scroll-top");
 const wellcome_section_txt = document.querySelector(".wellcome_section");
@@ -29,6 +31,8 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+// Switching Light mode / Dark mode
+
 function applyMode(mode) {
   if (mode === "night") {
     document.body.classList.add("night");
@@ -42,8 +46,6 @@ function applyMode(mode) {
 const savedMode = localStorage.getItem("mode") || "day";
 applyMode(savedMode);
 
-// For Navbar
-
 modeIcon.forEach((btn) => {
   btn.addEventListener("click", () => {
     const isNight = document.body.classList.toggle("night");
@@ -54,6 +56,8 @@ modeIcon.forEach((btn) => {
       : "<i class='fa-solid fa-moon'></i>";
   });
 });
+
+// Navbar Open and Close
 
 menuButton.addEventListener("click", () => {
   navBar.style.left = "0px";
@@ -80,10 +84,8 @@ function closeButtonAnimate() {
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
     reponsive_container.style.position = "fixed";
-    // navBar.style.position = "fixed";
   } else {
     reponsive_container.style.position = "sticky";
-    // navBar.style.position = "sticky";
   }
 });
 
@@ -103,6 +105,8 @@ scrollTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Typing Effect
 
 let txt = "Hey ✌";
 let txt2 = "It's Ronit";
@@ -145,5 +149,4 @@ function typeWriter() {
 
   setTimeout(typeWriter, 100); // Speed
 }
-
 typeWriter();
