@@ -15,19 +15,19 @@ const mediaMatch = window.matchMedia("(max-width: 700px)");
 
 // Right Click Disable
 
-// document.addEventListener("contextmenu", function (event) {
-//   event.preventDefault();
-// });
-// document.addEventListener("mousedown", function (event) {
-//   if (event.button === 2 || event.ctrlKey || event.shiftKey || event.altKey) {
-//     event.preventDefault();
-//   }
-// });
-// document.addEventListener("keydown", function (event) {
-//   if (event.ctrlKey || event.shiftKey || event.altKey) {
-//     event.preventDefault();
-//   }
-// });
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
+document.addEventListener("mousedown", function (event) {
+  if (event.button === 2 || event.ctrlKey || event.shiftKey || event.altKey) {
+    event.preventDefault();
+  }
+});
+document.addEventListener("keydown", function (event) {
+  if (event.ctrlKey || event.shiftKey || event.altKey) {
+    event.preventDefault();
+  }
+});
 
 function applyMode(mode) {
   if (mode === "night") {
