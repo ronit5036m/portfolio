@@ -3,7 +3,7 @@
   <a href="https://ronitshakhari.netlify.app/" target="_blank">Ronit.tech</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="./images/readme.png"/>
+  <img alt="Demo" src="./README_img/readme.png"/>
 </div>
 
 <br/>
