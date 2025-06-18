@@ -267,7 +267,7 @@ nav i {
 .img_container {
   height: 320px;
   width: 320px;
-  background-image: url("/src/assets/my_pic.png");
+  background-image: url("/src/assets/mypic/my_pic.png");
   background-size: cover;
   background-position-y: -1rem;
   background-repeat: no-repeat;
